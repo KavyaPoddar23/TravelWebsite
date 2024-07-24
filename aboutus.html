@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel and Tourism Website - About Us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><h1>Travel & Tourism</h1></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destinations.html">Destinations</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="about-section">
+    <div class="container">
+      <img src="aboutus.jpg" class="img-fluid rounded-circle mb-4" alt="About Us Image" style="max-width: 300px;">
+      <h2 style="color: palevioletred;">About Us</h2>
+      <p style="color: darkcyan;"> Travel & Tourism, we're dedicated to transforming your travel dreams into reality. Explore our platform for curated guides that offer deep insights into diverse destinations worldwide. Whether you're planning a tranquil beach getaway, an adventurous trek through the mountains, or a cultural exploration of bustling cities, we provide seamless booking options and expert recommendations to enhance every aspect of your journey. From luxurious accommodations to off-the-beaten-path experiences, our goal is to inspire and facilitate unforgettable travel experiences that create lasting memories. Join us in discovering the world's wonders and embark on journeys that redefine the way you travel.</p>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="container">
+      <h3>Details :</h3>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+        <div class="form-group">
+          <label>Destinations of Interest</label>
+          <input type="checkbox" id="dest1" name="destination" value="beach">
+          <label for="dest1"> Beach</label>
+          <input type="checkbox" id="dest2" name="destination" value="mountain">
+          <label for="dest2"> Mountain</label>
+          <input type="checkbox" id="dest3" name="destination" value="city">
+          <label for="dest3"> City</label><br>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

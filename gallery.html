@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Travel and Tourism Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><h1>Travel & Tourism</h1></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destinations.html">Destinations</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="gallery-section">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: goldenrod;">Explore Our Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="swiss.jpg" alt="Switzerland" data-video="swiss.mp4" data-audio="swiss.mp3">
+          <div class="overlay">
+            <div class="overlay-content">
+              <h3>Switzerland</h3>
+              <p>Click to view video/audio</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="paris.jpg" alt="Paris" data-video="paris.mp4" data-audio="paris.mp3">
+          <div class="overlay">
+            <div class="overlay-content">
+              <h3>Paris</h3>
+              <p>Click to view video/audio</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+            <img src="singapore.jpg" alt="Singapore" data-video="singapore.mp4" data-audio="singapore.mp3">
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3>Singapore</h3>
+                <p>Click to view video/audio</p>
+              </div>
+            </div>
+        </div>
+          <div class="gallery-item">
+            <img src="bali.jpg" alt="Bali" data-video="bali.mp4" data-audio="bali.mp3">
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3>Bali</h3>
+                <p>Click to view video/audio</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="maldives.jpg" alt="maldives" data-video="maldives.mp4" data-audio="maldives.mp3">
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3>Maldives</h3>
+                <p>Click to view video/audio</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="hongkong.jpg" alt="Hongkong" data-video="hongkong.mp4" data-audio="hongkong.mp3">
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3>Hongkong</h3>
+                <p>Click to view video/audio</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      galleryItems.forEach(item => {
+        const img = item.querySelector('img');
+        const videoSrc = img.getAttribute('data-video');
+        const audioSrc = img.getAttribute('data-audio');
+
+        item.addEventListener('click', function() {
+          if (videoSrc) {
+            playVideo(videoSrc);
+          } else if (audioSrc) {
+            playAudio(audioSrc);
+          }
+        });
+      });
+
+      function playVideo(src) {
+        alert('Playing video: ' + src); 
+      }
+
+      function playAudio(src) {
+        alert('Playing audio: ' + src); 
+      }
+    });
+  </script>
+</body>
+</html>
